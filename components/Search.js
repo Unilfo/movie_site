@@ -1,23 +1,29 @@
-import { useState } from "react";
+import {useContext, useState} from 'react'
+import {AppContext} from '../context/state'
 
 export default function Search() {
-    const [searchText, setSearchText] = useState(() => { return '' })
+  const [searchText, setSearchText] = useState('')
+  const { text, setText } = useContext(AppContext)
 
-    const search = () => {
-        console.log('update query: ', searchText);
+  const search = () => {
+    if(searchText === ''){
+      setText('INITIALS_FILMS')
+    }else{
+      setText(searchText)
     }
+    setSearchText('')
+  }
 
-    return (
-        <div>
-            <input
-                className='top_panel-search'
-                placeholder='Поиск фильмов и сериалов'
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-                onBlur={() => setSearchText('')}
-            />
-            <button onClick={search} className='top_panel-search-button' type="submit" title="Найти">Найти</button>
-            <style jsx>{`
+  return (
+    <div>
+      <input
+        className='top_panel-search'
+        placeholder='Поиск фильмов и сериалов'
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
+      />
+      <button onClick={search} className='top_panel-search-button' type="submit" title="Найти">Найти</button>
+      <style jsx>{`
             .top_panel-search{
                 padding-left: 5px;
                 padding-right: 5px;
@@ -46,6 +52,6 @@ export default function Search() {
                 background-color: #88b600 !important;
             }
         `}</style>
-        </div>
-    )
+    </div>
+  )
 }

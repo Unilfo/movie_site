@@ -31,7 +31,7 @@ export default function Footer() {
                     position: fixed;
                     right: 45px;
                     bottom: 45px;
-                    z-index: 1;
+                    z-index: 11;
                 }
             `}</style>
         </footer >

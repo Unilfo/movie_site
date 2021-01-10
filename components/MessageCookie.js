@@ -28,6 +28,7 @@ export default function MessageCookie() {
                             width: 100%; 
                             height: 60px; 
                             border-top: 1px solid black;
+                            z-index: 6;
                         }
                         .message-box{
                             position: absolute;

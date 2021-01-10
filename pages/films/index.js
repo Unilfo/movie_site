@@ -4,14 +4,14 @@ import Card from "../../components/Card"
 import Pagination from "../../components/Pagination"
 import { AppContext } from '../../context/state'
 
-export default function Films({ films }) {
+export default function Films() {
     const { state, setState } = useContext(AppContext)
-    console.log('state', state)
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        setData(films)
-    }, [])
+        setData(state.films)
+    }, [state])
+
 
     if (!data) {
         return (

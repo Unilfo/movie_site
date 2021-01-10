@@ -1,23 +1,23 @@
 import Link from 'next/link'
 
 export default function Navigation() {
-    const links = [
-        { title: 'Главная', ref: '/films' },
-        { title: 'Фильмы', ref: '/films' },
-        { title: 'Сериалы', ref: '/serials' },
-        { title: 'Мультфильмы', ref: '/mult' },
-        { title: 'Аниме', ref: '/multa' },
-        { title: 'Новинки 2021', ref: '/mults' },
-    ]
+  const links = [
+    {title: 'Главная', ref: '/films', filter:'all'},
+    {title: 'Фильмы', ref: '/films', filter:'film'},
+    {title: 'Сериалы', ref: '/serials', filter:'serial'},
+    {title: 'Мультфильмы', ref: '/mult', filter:'mult'},
+    {title: 'Аниме', ref: '/multa', filter:'mult'},
+    {title: 'Новинки 2021', ref: '/mults', filter:'mult'},
+  ]
 
-    return (
-        <nav>
-            <div className="grid">
-                {links.map(({ title, ref }) =>
-                    <Link href={ref} key={title}><a>{title}</a></Link>
-                )}
-            </div>
-            <style jsx>{`
+  return (
+    <nav>
+      <div className="grid">
+        {links.map(({title, ref, filter}) =>
+          <Link href={ref} key={title}><a>{title}</a></Link>,
+        )}
+      </div>
+      <style jsx>{`
                 .grid{
                     display: flex;
                     justify-content: space-between;
@@ -40,7 +40,7 @@ export default function Navigation() {
                     text-decoration: none;
                 }
             `}</style>
-        </nav>
-    )
+    </nav>
+  )
 }
 

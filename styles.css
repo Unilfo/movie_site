@@ -42,8 +42,6 @@
     background-color: #88b669 !important;
 }
 .pagination{
-    padding-top: 50px;
-    padding-bottom: 50px;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -53,12 +51,10 @@
     background-color: #333;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
     border-radius: 0;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding: 50px 120px;
     margin-bottom: 0;
 }
 .page-link{
-    width: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,5 +76,5 @@
     background-color: #88b669 !important;
 }
 .card:last-child {
-     margin-bottom: 15px; 
+     margin-bottom: 15px;
 }
