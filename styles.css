@@ -1,0 +1,84 @@
+.FaPlayCircle{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+    color: #ce1025;
+    margin: 0 auto;
+    font-size: 80px;
+    opacity: 0;
+    transition: color .3s,background-color .3s,opacity .3s;
+}
+.card:hover .FaPlayCircle{
+    opacity: 0.8;
+
+}
+.card:hover .card-item-img{
+    background-color: rgba(0,0,0,.8);
+}
+.card:hover .mask{
+    opacity: 1;
+}
+.mask {
+    position: absolute;
+    left: 45px;
+    top: 33px;
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    opacity: 0;
+    transition: color .3s,background-color .3s,opacity .3s;
+}
+.message_close{
+    transition:  1.3s;
+}
+.message_close:hover{
+    transform: rotate(90deg);
+}
+.active{
+    background-color: #88b669 !important;
+}
+.pagination{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: #ccc;
+    background-color: #333;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.8);
+    border-radius: 0;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 0;
+}
+.page-link{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: #444;
+}
+.page-link{
+    color: black;
+    box-shadow: none !important;
+}
+.page-link:hover{
+    background-color: #88b669 !important;
+    color: black;
+}
+.page-item.active .page-link {
+    border: 1px solid black;
+    background-color: #88b669 !important;
+}
+.card:last-child {
+     margin-bottom: 15px; 
+}
