@@ -5,37 +5,37 @@ export default function NewFilms() {
         {
             name: '1',
             author: '2',
-            img: `http://localhost:3000/1.jpg`
+            img: `http://192.168.3.134:3000/1.jpg`
         },
         {
             name: '2',
             author: '2',
-            img: `http://localhost:3000/2.jpg`
+            img: `http://192.168.3.134:3000/2.jpg`
         },
         {
             name: '3',
             author: '2',
-            img: `http://localhost:3000/3.jpg`
+            img: `http://192.168.3.134:3000/3.jpg`
         },
         {
             name: '4',
             author: '2',
-            img: `http://localhost:3000/4.jpg`
+            img: `http://192.168.3.134:3000/4.jpg`
         },
         {
             name: '5',
             author: '2',
-            img: `http://localhost:3000/5.jpg`
+            img: `http://192.168.3.134:3000/5.jpg`
         },
         {
             name: '6',
             author: '2',
-            img: `http://localhost:3000/6.jpg`
+            img: `http://192.168.3.134:3000/6.jpg`
         },
         {
             name: '7',
             author: '2',
-            img: `http://localhost:3000/7.jpg`
+            img: `http://192.168.3.134:3000/7.jpg`
         },
     ]
 

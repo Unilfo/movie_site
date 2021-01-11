@@ -3,7 +3,7 @@ import {AppContext} from '../context/state'
 
 export default function Search() {
   const [searchText, setSearchText] = useState('')
-  const { text, setText } = useContext(AppContext)
+  const { text, setText , setNeedUpdateSearch} = useContext(AppContext)
 
   const search = () => {
     if(searchText === ''){
@@ -12,6 +12,7 @@ export default function Search() {
       setText(searchText)
     }
     setSearchText('')
+    setNeedUpdateSearch(true)
   }
 
   return (
@@ -51,6 +52,12 @@ export default function Search() {
             .top_panel-search-button:hover{
                 background-color: #88b600 !important;
             }
+            button, input, optgroup, select, textarea {
+              margin: 0;
+              font-family: none; 
+              font-size: 14px; 
+              line-height: inherit;
+          }
         `}</style>
     </div>
   )

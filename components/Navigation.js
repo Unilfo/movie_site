@@ -1,20 +1,28 @@
 import Link from 'next/link'
+import {AppContext} from '../context/state'
+import {useContext} from 'react'
 
 export default function Navigation() {
+  const {setFilter, setNeedUpdate} = useContext(AppContext)
   const links = [
     {title: 'Главная', ref: '/films', filter:'all'},
-    {title: 'Фильмы', ref: '/films', filter:'film'},
-    {title: 'Сериалы', ref: '/serials', filter:'serial'},
+    {title: 'Фильмы', ref: '/films', filter:'films'},
+    {title: 'Сериалы', ref: '/serials', filter:'serials'},
     {title: 'Мультфильмы', ref: '/mult', filter:'mult'},
     {title: 'Аниме', ref: '/multa', filter:'mult'},
     {title: 'Новинки 2021', ref: '/mults', filter:'mult'},
   ]
 
+  const handleClick = (filter) => {
+    setFilter(filter)
+    setNeedUpdate(true)
+  }
+
   return (
     <nav>
       <div className="grid">
         {links.map(({title, ref, filter}) =>
-          <Link href={ref} key={title}><a>{title}</a></Link>,
+          <Link href={ref} key={title}><a onClick={()=>handleClick(filter)}>{title}</a></Link>,
         )}
       </div>
       <style jsx>{`
